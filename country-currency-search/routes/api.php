@@ -24,4 +24,5 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::get('/country_currency/search_country_or_currency', 'CountryCurrencyController@searchCountryOrCurrency');
 
 
+
 });

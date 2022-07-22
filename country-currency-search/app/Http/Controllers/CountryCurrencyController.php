@@ -8,6 +8,7 @@ use App\Helper\Constants;
 use App\ImplementationService\CountryCurrencyImplementationService;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class CountryCurrencyController extends Controller
@@ -63,6 +64,8 @@ class CountryCurrencyController extends Controller
         }
         //end validation
 
+        $request->json('')->defa
+
         //set values for response message array
         $response["result"] = $countrycurrencyimplamentationservice->listCountriesAndCurrenciesImplementation($request->all());
 
@@ -70,15 +73,12 @@ class CountryCurrencyController extends Controller
 
         //successful response
         return response($response,200);
+
+
+
+
     }
 
-    /**
-     *method for setting up data after migration
-     *
-     * @param Request $request
-     *
-     * @return Response
-     */
 
 
 }
